@@ -1,31 +1,28 @@
-import logoImage from "../../images/Logo.png"
-import backgroundImg from '../../images/bg-card.png'
+
 import backgroundLine from '../../images/Rectangle.png'
+import { FollowButton } from "../FollowButton/FollowButton"
+import { UserCardHeader } from '../UserCardHeader/UserCardHeader'
 export const UserCard = () => {
     return <div style={{
         backgroundColor: "#471CA9",
         width: 380,
     }}>
-        <div style={{
-            backgroundImage: `url(${backgroundImg})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: '36px 28px',
-            height: 214,
-            padding:20,
-        }}>
-            <img src={logoImage} alt="logo GoIt" />
-    </div>
+        <UserCardHeader/>
         <div style={{
             height: 246,
             backgroundImage: `url(${backgroundLine})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: '0 0',
             textAlign: "center",
-            display:"flex",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            justifyContent: "center",
         }
         }>
             <p>TWEETS</p>
             <p>FOLLOWERS</p>
+            <FollowButton/>
         </div>
     </div>
 }
